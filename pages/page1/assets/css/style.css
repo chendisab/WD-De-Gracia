@@ -1,82 +1,170 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
   }
-  
-  html {
-    font-family: sans-serif;
-    font-weight: 300;
-    color: hsl(0 0% 15%);
-  }
-  
-  h2 {
-    font-weight: 400;
-    margin: 2rem 0 0.25rem 0;
-  }
-  
-  h1 {
-    position: fixed;
-    right: 1rem;
-    bottom: 1rem;
-    opacity: 0.5;
-    margin: 0;
-  }
-  
-  p {
-    margin: 0;
-  }
-  
+ 
   body {
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
+    background-color: #d24c2b;
+    color: #fff;
   }
-  
-  figure {
-    width: 500px;
-    aspect-ratio: 8 / 5;
-    --bg: hsl(330 80% calc(90% - (var(--hover) * 10%)));
-    --accent: hsl(280 80% 40%);
-    transition: background 0.2s;
-    background:
-      radial-gradient(circle at top left, var(--accent), transparent 75%),
-      var(--bg);
-    margin: 0;
+ 
+  .hero-content a {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+ 
+  .navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+ 
+  .navbar ul {
+    list-style: none;
+    display: flex;
+  }
+ 
+  .navbar ul li {
+    margin: 0 15px;
+  }
+ 
+  .navbar ul li a, .navbar .account {
+    text-decoration: none;
+    color: #fff;
+  }
+ 
+  .hero {
+    height: 100vh;
+    background-image: url('images/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
     position: relative;
-    overflow: hidden;
-    border-radius: 1.5rem;
   }
-  
-  figure:after {
-    content: "";
+ 
+  .hero::before {
+    content: '';
     position: absolute;
-    width: 20%;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    bottom: 0%;
-    left: 10%;
-    background: linear-gradient(-65deg, var(--bg) 50%, var(--accent) 50%);
-    filter: blur(25px);
-    transform:
-      translateX(calc(var(--hover) * 15%))
-      scale(calc(1 + (var(--hover) * 0.2)));
-    transition: transform 0.2s, background 0.2s;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
   }
-  
-  img {
+ 
+  .hero-content {
     position: absolute;
-    left: 20%;
-    top: 15%;
-    width: 40%;
-    transform:
-      translateX(calc(var(--hover) * -15%))
-      scale(calc(1 + (var(--hover) * 0.2)));
-    transition: transform 0.2s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
   }
-  
-  article {
-    --hover: 0;
+ 
+  .hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
   }
-  
-  article:hover {
-    --hover: 1;
+ 
+  .hero-content p {
+    font-size: 18px;
+  }
+ 
+  main {
+    padding: 50px 20px;
+  }
+ 
+  .layer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+ 
+  .layer .content {
+    flex: 1;
+    padding: 20px;
+  }
+ 
+  .layer .content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+ 
+  .layer .content p {
+    margin-bottom: 20px;
+  }
+ 
+  .layer .content a {
+    text-decoration: none;
+    color: #ffdd57;
+  }
+ 
+  .layer .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+ 
+  .layer .image-container img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+ 
+  footer {
+    background-color: #020c1b;
+    padding: 50px 20px;
+    text-align: center;
+  }
+ 
+  footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+ 
+  footer .footer-content .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+ 
+  footer .footer-content p {
+    max-width: 400px;
+  }
+ 
+  footer .links {
+    display: flex;
+  }
+ 
+  footer .links div {
+    margin: 0 20px;
+  }
+ 
+  footer .links h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+ 
+  footer .links ul {
+    list-style: none;
+  }
+ 
+  footer .links ul li {
+    margin-bottom: 5px;
+  }
+ 
+  footer .links ul li a {
+    text-decoration: none;
+    color: #ffdd57;
   }
